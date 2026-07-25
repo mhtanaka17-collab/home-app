@@ -4,7 +4,23 @@
 
 ## プロジェクト概要
 
-現在準備中のプロジェクトです。内容が決まり次第、このセクションを更新してください。
+Supabase認証機能付きの不動産管理Webアプリ。React + Viteで構成する。
+
+- メールアドレス＋パスワードで会員登録・ログインができる
+- ログイン後は物件一覧画面（ダミーデータ）に遷移する
+- 未ログイン時はログイン画面へリダイレクトする
+- ログアウト機能を持つ
+
+### 構成
+- `src/supabaseClient.js` : Supabaseクライアントの初期化（接続情報は`.env`で管理）
+- `src/contexts/AuthContext.jsx` : ログイン状態（セッション）をアプリ全体に共有するContext
+- `src/components/ProtectedRoute.jsx` : 未ログイン時に`/login`へリダイレクトする保護ルート
+- `src/pages/Login.jsx`, `src/pages/SignUp.jsx` : ログイン・会員登録フォーム
+- `src/pages/Properties.jsx` : 物件一覧（カード形式、ダミーデータ）
+
+### 環境変数（`.env`、`.gitignore`対象）
+- `VITE_SUPABASE_URL` : SupabaseプロジェクトURL
+- `VITE_SUPABASE_PUBLISHABLE_KEY` : Supabase Publishable Key
 
 ## Git運用ルール
 
@@ -15,4 +31,6 @@
 
 ## 開発コマンド
 
-プロジェクトの技術スタックが決まり次第、ビルド・テスト・Lintなどのコマンドをここに追記してください。
+- `npm run dev` : 開発サーバーを起動
+- `npm run build` : 本番ビルド
+- `npm run lint` : Lint実行（oxlint）
