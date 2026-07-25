@@ -28,7 +28,7 @@ Supabase認証機能付きの不動産管理Webアプリ。React + Viteで構成
 
 ## デプロイ情報
 
-- 本番URL：https://プロジェクト名.vercel.app
+- 本番URL：https://home-app-theta-seven.vercel.app
 - Supabaseプロジェクト名：realestate-app
 
 ## Git運用ルール
