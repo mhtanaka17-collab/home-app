@@ -175,8 +175,118 @@ button {
 }
 
 .property-card .area {
+  margin: 0 0 4px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.property-card .layout {
   margin: 0;
   font-size: 14px;
+  color: var(--text-muted);
+}
+
+.property-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.property-card-actions button {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card-bg);
+  font-size: 13px;
+}
+
+.property-card-actions button:hover {
+  background: #f0f1f3;
+}
+
+.properties-toolbar {
+  margin-bottom: 16px;
+}
+
+.properties-toolbar button {
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.properties-toolbar button:hover {
+  background: var(--accent-hover);
+}
+
+.property-form {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 360px;
+}
+
+.property-form label {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.property-form input {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.property-form input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.property-form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.property-form-actions button[type='submit'] {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.property-form-actions button[type='submit']:hover {
+  background: var(--accent-hover);
+}
+
+.property-form-actions button[type='submit']:disabled {
+  background: #93a4c3;
+  cursor: not-allowed;
+}
+
+.property-form-actions button[type='button'] {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card-bg);
+  font-size: 14px;
+}
+
+.loading-text,
+.empty-text {
   color: var(--text-muted);
 }
 

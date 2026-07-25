@@ -7,16 +7,20 @@
 Supabase認証機能付きの不動産管理Webアプリ。React + Viteで構成する。
 
 - メールアドレス＋パスワードで会員登録・ログインができる
-- ログイン後は物件一覧画面（ダミーデータ）に遷移する
+- ログイン後は物件一覧画面に遷移する
 - 未ログイン時はログイン画面へリダイレクトする
 - ログアウト機能を持つ
+- 物件（物件名・家賃・エリア・間取り）をSupabaseのテーブルでCRUD管理する。登録者本人のみ閲覧・編集・削除可能（RLS）
 
 ### 構成
+- `supabase/schema.sql` : `properties`テーブルの作成とRLSポリシー定義（Supabaseダッシュボードで実行する）
 - `src/supabaseClient.js` : Supabaseクライアントの初期化（接続情報は`.env`で管理）
 - `src/contexts/AuthContext.jsx` : ログイン状態（セッション）をアプリ全体に共有するContext
 - `src/components/ProtectedRoute.jsx` : 未ログイン時に`/login`へリダイレクトする保護ルート
 - `src/pages/Login.jsx`, `src/pages/SignUp.jsx` : ログイン・会員登録フォーム
-- `src/pages/Properties.jsx` : 物件一覧（カード形式、ダミーデータ）
+- `src/api/properties.js` : 物件のCRUD処理（fetch/create/update/delete）
+- `src/components/PropertyForm.jsx` : 物件の新規登録・編集で共用するフォーム
+- `src/pages/Properties.jsx` : 物件一覧（カード形式）・登録・編集・削除
 
 ### 環境変数（`.env`、`.gitignore`対象）
 - `VITE_SUPABASE_URL` : SupabaseプロジェクトURL
