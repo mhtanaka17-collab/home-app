@@ -26,6 +26,11 @@ Supabase認証機能付きの不動産管理Webアプリ。React + Viteで構成
 - `VITE_SUPABASE_URL` : SupabaseプロジェクトURL
 - `VITE_SUPABASE_PUBLISHABLE_KEY` : Supabase Publishable Key
 
+## デプロイ情報
+
+- 本番URL：https://プロジェクト名.vercel.app
+- Supabaseプロジェクト名：realestate-app
+
 ## Git運用ルール
 
 - **コードに変更を加えたら、都度コミットしてGitHubにプッシュすること。** 変更を溜め込まず、意味のある単位（1機能・1修正など）ごとにコミットし、その都度リモート（origin）へプッシュする。
